@@ -24,7 +24,7 @@
 --reference: "refdata-hg19-2.1.0/fasta/genome.fa" is the reference which can be download from https://support.10xgenomics.com/genome-exome/software/downloads/latest (or wget --no-check-certificate https://s3-us-west-2.amazonaws.com/10x.datasets/refdata-hg19-2.1.0.tar.gz).   <br />
 
 Step 1 performs a multiple-sample variants call by freebayes/GATK. Multiple-sample called vcf file then is splitted into three single sample vcf files. The single sample vcf is further applied to longranger as the precalled vcf to make the phased variants call. Alternatively, User can also use the following commands to finish this step. <br />
-More information can be found from https://software.broadinstitute.org/gatk/gatkdocs/org_broadinstitute_gatk_tools_walkers_haplotypecaller_HaplotypeCaller.php. 
+For GATK, more information can be found from https://software.broadinstitute.org/gatk/gatkdocs/org_broadinstitute_gatk_tools_walkers_haplotypecaller_HaplotypeCaller.php. 
 <br />
 java -jar GenomeAnalysisTK.jar -T HaplotypeCaller -R refdata-hg19-2.1.0/fasta/genome.fa -I NA12878_GRCh37.bam -o child_gvcf -ERC GVCF  <br />
 java -jar GenomeAnalysisTK.jar -T HaplotypeCaller -R refdata-hg19-2.1.0/fasta/genome.fa -I NA12891_GRCh37.bam -o parent1_gvcf -ERC GVCF  <br />
@@ -34,17 +34,24 @@ java -jar GenomeAnalysisTK.jar -T GenotypeGVCFs -R refdata-hg19-2.1.0/fasta/geno
 To split the multiple-sample vcf file, vcf-tools which can be download from http://vcftools.sourceforge.net/ can be used as follows: <br />
 vcf-subset -c trio_merge.vcf <br />
 
-To run phased variants call, longranger can be download from https://support.10xgenomics.com/genome-exome/software/downloads/latest, and the precalled vcf file is generated from the previous step. <br />
+To run phased variants call, longranger can be download from https://support.10xgenomics.com/genome-exome/software/downloads/latest, and all the precalled vcf files are generated from the previous step. <br />
 longranger run --id=NA12878 --sex=female --fastqs=NA12878.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa --precalled=20976.vcf  <br />
 longranger run --id=NA12891 --sex=male --fastqs=NA12891.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa --precalled=20971.vcf  <br />
 longranger run --id=NA12892 --sex=female --fastqs=NA12892.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa --precalled=20972.vcf  <br />
 
 
-
-
-
 # step 2:
 ./run_denovo_step2.sh --child_vcf NA12878_phased_variants.vcf.gz --parent1_vcf NA12891_phased_variants.vcf.gz --parent2_vcf NA12892_phased_variants.vcf.gz --chr_start 1 --chr_end 1 --output_prefix trio_mergecall_10x_phased
+
+--child_vcf: "NA12878_phased_variants.vcf.gz" is the phased gzipped vcf file of the child called by longranger from step 1. <br />
+--parent1_vcf: "NA12891_phased_variants.vcf.gz" is the phased gzipped vcf file of the first parent called by longranger from step 1. <br />
+--parent2_vcf: "NA12892_phased_variants.vcf.gz" is the phased gzipped vcf file of the second parent called by longranger from step 1. <br />
+--chr_start: "1" specifies chromosome starting from 1. 
+--chr_end: "1" specifies chromosome ending by 1. 
+--output_prefix trio_mergecall_10x_phased
+
+
+Step 2 
 
 
 # step3:
