@@ -1,4 +1,8 @@
-# HAPDeNovo
+# HAPDeNovo: a haplotype based approach for filtering and phasing de novo mutations on linked-reads sequencing
+
+HAPDeNovo is a software package to detect de novo mutations using read clouds sequencing data. 
+## Download:
+Source code are available at .
 
 ## Dependencies:
 GATK: https://software.broadinstitute.org/gatk/download/     <br />
