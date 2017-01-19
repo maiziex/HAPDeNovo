@@ -1,10 +1,11 @@
 # HAPDeNovo
 
 ## Dependencies:
-GATK: 
-Freebayes:
-l
-
+GATK: https://software.broadinstitute.org/gatk/download/     <br />
+Freebayes: https://github.com/ekg/freebayes   <br />
+Longranger: https://support.10xgenomics.com/genome-exome/software/downloads/latest  <br />
+VCFtools: http://vcftools.sourceforge.net/ <br />
+tabix: https://sourceforge.net/projects/samtools/files/tabix/   <br />
 
 
 ## Step1:
@@ -41,7 +42,7 @@ java -jar GenomeAnalysisTK.jar -T HaplotypeCaller -R refdata-hg19-2.1.0/fasta/ge
 java -jar GenomeAnalysisTK.jar -T GenotypeGVCFs -R refdata-hg19-2.1.0/fasta/genome.fa -V child_gvcf -V parent1_gvcf -V parent2_gvcf -o trio_merge.vcf  
 ```
 
-To split the multiple-sample vcf file, vcf-tools which can be download from http://vcftools.sourceforge.net/ can be used as follows: <br />
+To split the multiple-sample vcf file, VCFtools which can be download from http://vcftools.sourceforge.net/ can be used as follows: <br />
 ```
 vcf-subset -c trio_merge.vcf
 ```
