@@ -4,8 +4,8 @@
 ./run_denovo_step1.sh --child NA12878 --child_id 20976 --child_sex female --child_bam NA12878_GRCh37.bam --parent1 NA12891 --parent1_id 20971 --parent1_sex male --parent1_bam NA12891_GRCh37.bam --parent2 NA12892 --parent2_id 20972 --parent2_sex female --parent2_bam NA12892_GRCh37.bam --vcf trio_merge.vcf --child_fastqs NA12878.fastqs --parent1_fastqs NA12891.fastqs --parent2_fastqs NA12892.fastqs  --reference refdata-hg19-2.1.0/fasta/genome.fa
 
 
---child: "NA12878" is the origin sample id of the child. 
---child_id: "20976"
+--child: "NA12878" is the origin sample id of the child. \\
+--child_id: "20976"  \\
 --child_sex: "female" specifies the sex of the child.
 --child_bam: "NA12878_GRCh37.bam" is the bam file of the child.
 --parent1: "NA12891" is the origin sample id of the first parent. 
