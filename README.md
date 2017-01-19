@@ -5,15 +5,15 @@
 
 
 --child: "NA12878" is the origin sample id of the child.  <br />
---child_id: "20976"  <br />
+--child_id: "20976" is the sample id from the header of the bam file for child. <br />
 --child_sex: "female" specifies the sex of the child. <br />
 --child_bam: "NA12878_GRCh37.bam" is the bam file of the child. <br />
 --parent1: "NA12891" is the origin sample id of the first parent.  <br />
---parent1_id: "20971" <br />
+--parent1_id: "20971" is the sample id from the header of the bam file for the first parent. <br />
 --parent1_sex: "male" specifies the sex of the first parent. <br />
 --parent1_bam: "NA12891_GRCh37.bam" is the bam file of the first parent. <br />
 --parent2: "NA12892" is the origin sample id of the second parent.  <br />
---parent2_id: "20972" <br />
+--parent2_id: "20972" is the sample id from the header of the bam file for the second parent<br />
 --parent2_sex: "female" specifies the sex of the second parent. <br />
 --parent2_bam: "NA12892_GRCh37.bam" is the bam file of the second parent. <br />
 --output_vcf: "trio_merge.vcf" is a user customized name of the multiple-sample variants called vcf file from the trio by freebayes/GATK.
@@ -60,15 +60,15 @@ longranger run --id=NA12892 --sex=female --fastqs=NA12892.fastqs --reference=ref
 --child: "NA12878" is the origin sample id of the child.  <br />
 --parent1: "NA12891" is the origin sample id of the first parent.  <br />
 --parent2: "NA12892" is the origin sample id of the second parent.  <br />
---child_id: "20976"  <br />
+--child_id: "20976" is the sample id from the header of the bam file for child.<br />
 --child_hp1_id: "20000" is the user customized child id for the first haplotype.  <br />
 --child_hp2_id" "20001" is the user customized child id for the second haplotype.  <br /> 
 --child_nohp_id: "20002" is the user customized child id for the undefined haplotype. <br />
---parent1_id: "20971"  <br />
+--parent1_id: "20971" is the sample id from the header of the bam file for the first parent. <br />
 --parent1_hp1_id: "20003" is the user customized first parent id for the first haplotype.  <br />
 --parent1_hp2_id: "20004" is the user customized first parent id for the second haplotype.  <br />
 --parent1_nohp_id: "20005" is the user customized first parent id for the undefined haplotype.  <br /> 
---parent2_id: "20972"  <br />
+--parent2_id: "20972" is the sample id from the header of the bam file for second parent. <br />
 --parent2_hp1_id: "20006" is the user customized second parent id for the first haplotype.  <br />
 --parent2_hp2_id: "20007" is the user customized second parent id for the second haplotype.  <br />
 --parent2_nohp_id: "20008" is the user customized second parent id for the undefined haplotype.  <br /> 
@@ -85,13 +85,13 @@ python3 HAPDeNovo.py --chr_start 1 --chr_end 10 --child_id 20976 --parent1_id 20
 
 --chr_start: "1" specifies chromosome starting from 1.  <br />
 --chr_end: "10" specifies chromosome ending by 10.   <br />
---child_id: "20976"  <br />
---parent1_id: "20971"  <br />
---parent2_id: "20972"  <br />
+--child_id: "20976" is the sample id from the header of the bam file for child.  <br />
+--parent1_id: "20971" is the sample id from the header of the bam file for first parent. <br />
+--parent2_id: "20972" is the sample id from the header of the bam file for second parent.  <br />
 --phased_vcf_prefix: "trio_mergecall_10x_phased" is the user customized prefix of the vcf file for each chromosome from step 2.  <br />
 --output: "denovo_triodenovo_depth15_HAPDeNovo_filer1.txt" is the user customized txt file name for final de novo mutation output. <br />
---depth: "1" specifies the depth filter. <br />
---input_denovo: "denovo_triodenovo_depth15_DQ7.txt" is the de novo results from other tools like GATK/freebayes/TrioDenovo/DeNovoGear, or any user customized txt file for de novo muations. <br />
+--depth: "1" specifies the depth filter by 1. <br />
+--input_denovo: "denovo_triodenovo_depth15_DQ7.txt" is the de novo results from other tools like GATK/freebayes/TrioDenovo/DeNovoGear, or any user customized txt file for de novo muations. This text file needs to contain chromose name and the corresponding locus per row for each de novo mutation. <br />
 --input_file_dir: "../doc" specifies the directory folder for the input_denovo file.  <br />
 
 
