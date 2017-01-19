@@ -4,7 +4,7 @@ HAPDeNovo is a software package to detect de novo mutations using read clouds se
 
 ## Download:
 ```
-git clone https://github.com/HAPDeNovo/HAPDeNovo.git.
+git clone https://github.com/HAPDeNovo/HAPDeNovo.git
 ```
 
 ## Dependencies:
