@@ -2,7 +2,7 @@
 
 HAPDeNovo is a software package to detect de novo mutations using read clouds sequencing data. 
 ## Download:
-Source code are available at .
+Source code are available at https://github.com/HAPDeNovo/HAPDeNovo.git.
 
 ## Dependencies:
 GATK: https://software.broadinstitute.org/gatk/download/     <br />
@@ -11,8 +11,8 @@ Longranger: https://support.10xgenomics.com/genome-exome/software/downloads/late
 VCFtools: http://vcftools.sourceforge.net/ <br />
 tabix: https://sourceforge.net/projects/samtools/files/tabix/   <br />
 
-
-## Step1:
+## Running The Codwe:
+### Step1:
 ```
 ./run_denovo_step1.sh --child NA12878 --child_id 20976 --child_sex female --child_bam NA12878_GRCh37.bam --parent1 NA12891 --parent1_id 20971 --parent1_sex male --parent1_bam NA12891_GRCh37.bam --parent2 NA12892 --parent2_id 20972 --parent2_sex female --parent2_bam NA12892_GRCh37.bam --output_vcf trio_merge.vcf --child_fastqs NA12878.fastqs --parent1_fastqs NA12891.fastqs --parent2_fastqs NA12892.fastqs  --reference refdata-hg19-2.1.0/fasta/genome.fa
 ```
@@ -36,7 +36,7 @@ tabix: https://sourceforge.net/projects/samtools/files/tabix/   <br />
 --parent2_fastqs: "NA12892.fastqs" is the 10X fastqs file of the second parent.  <br />
 --reference: "refdata-hg19-2.1.0/fasta/genome.fa" is the reference which can be download from https://support.10xgenomics.com/genome-exome/software/downloads/latest (or wget --no-check-certificate https://s3-us-west-2.amazonaws.com/10x.datasets/refdata-hg19-2.1.0.tar.gz).   <br />
 
-### Step 1 performs a multiple-sample variants call by freebayes/GATK. Multiple-sample called vcf file then is splitted into three single sample vcf files. The single sample vcf is further applied to Longranger as the precalled vcf to make the phased variants call. Alternatively, User can also use the following commands to finish this step. <br />
+#### Step 1 performs a multiple-sample variants call by freebayes/GATK. Multiple-sample called vcf file then is splitted into three single sample vcf files. The single sample vcf is further applied to Longranger as the precalled vcf to make the phased variants call. Alternatively, User can also use the following commands to finish this step. <br />
 For GATK, more information can be found from https://software.broadinstitute.org/gatk/gatkdocs/org_broadinstitute_gatk_tools_walkers_haplotypecaller_HaplotypeCaller.php. 
 <br />
 ```
@@ -58,7 +58,7 @@ longranger wgs --id=NA12891 --sex=male --fastqs=NA12891.fastqs --reference=refda
 longranger wgs --id=NA12892 --sex=female --fastqs=NA12892.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa --precalled=20972.vcf  
 ```
 
-## Step 2:
+### Step 2:
 ```
 ./run_denovo_step2.sh --child_vcf NA12878_phased_variants.vcf.gz --parent1_vcf NA12891_phased_variants.vcf.gz --parent2_vcf NA12892_phased_variants.vcf.gz --chr_start 1 --chr_end 10 --output_prefix trio_mergecall_10x_phased
 ```
@@ -72,7 +72,7 @@ longranger wgs --id=NA12892 --sex=female --fastqs=NA12892.fastqs --reference=ref
 
 
 
-## Step3:
+### Step3:
 ```
 ./run_denovo_step3.sh --child NA12878 --parent1 NA12891 --parent2 NA12892 --child_id 20976 --child_hp1_id 20000 --child_hp2_id 20001 --child_nohp_id 20002 --parent1_id 20971 --parent1_hp1_id 20003 --parent1_hp2_id 20004 --parent1_nohp_id 20005 --parent2_id 20972 --parent2_hp1_id 20006 --parent2_hp2_id 20007 --parent2_nohp_id 20008 --child_bam NA12878_GRCh37.bam --parent1_bam NA12891_GRCh37.bam --parent2_bam NA12892_GRCh37.bam --reference refdata-hg19-2.1.0/fasta/genome.fa --chr_start 1 --chr_end 10
 ```
@@ -100,7 +100,7 @@ longranger wgs --id=NA12892 --sex=female --fastqs=NA12892.fastqs --reference=ref
 --chr_end: "10" specifies chromosome ending by 10.   <br />
 
 
-## Use HAPDeNovo
+### Run HAPDeNovo
 ```
 python3 HAPDeNovo.py --chr_start 1 --chr_end 10 --child_id 20976 --parent1_id 20971 --parent2_id 20972 --phased_vcf_prefix trio_mergecall_10x_phased --output denovo_triodenovo_depth15_HAPDeNovo_filer1.txt --depth 1 --input_denovo denovo_triodenovo_depth15_DQ7.txt --input_file_dir ../doc
 ```
