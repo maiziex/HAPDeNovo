@@ -10,6 +10,7 @@ Freebayes: https://github.com/ekg/freebayes   <br />
 Longranger: https://support.10xgenomics.com/genome-exome/software/downloads/latest  <br />
 VCFtools: http://vcftools.sourceforge.net/ <br />
 tabix: https://sourceforge.net/projects/samtools/files/tabix/   <br />
+To be able to execute the above programs by typing their name on the command line, the program executables must be in one of the directories listed in the PATH environment variable.
 
 ## Running The Code:
 ### Step1:
