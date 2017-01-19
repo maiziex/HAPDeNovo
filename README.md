@@ -2,7 +2,7 @@
 
 HAPDeNovo is a software package to detect de novo mutations using read clouds sequencing data. 
 ## Download:
-Source code are available at https://github.com/HAPDeNovo/HAPDeNovo.git.
+Source code is available at https://github.com/HAPDeNovo/HAPDeNovo.git.
 
 ## Dependencies:
 GATK: https://software.broadinstitute.org/gatk/download/     <br />
