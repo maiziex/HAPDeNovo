@@ -1,8 +1,11 @@
 # HAPDeNovo: a haplotype based approach for filtering and phasing de novo mutations on linked-reads sequencing
 
 HAPDeNovo is a software package to detect de novo mutations using read clouds sequencing data. 
+
 ## Download:
-Source code is available at https://github.com/HAPDeNovo/HAPDeNovo.git.
+```
+git clone https://github.com/HAPDeNovo/HAPDeNovo.git.
+```
 
 ## Dependencies:
 Python3: https://www.python.org/downloads/  <br />
@@ -46,6 +49,11 @@ java -jar GenomeAnalysisTK.jar -T HaplotypeCaller -R refdata-hg19-2.1.0/fasta/ge
 java -jar GenomeAnalysisTK.jar -T HaplotypeCaller -R refdata-hg19-2.1.0/fasta/genome.fa -I NA12891_GRCh37.bam -o parent1_gvcf -ERC GVCF  
 java -jar GenomeAnalysisTK.jar -T HaplotypeCaller -R refdata-hg19-2.1.0/fasta/genome.fa -I NA12892_GRCh37.bam -o parent2_gvcf -ERC GVCF 
 java -jar GenomeAnalysisTK.jar -T GenotypeGVCFs -R refdata-hg19-2.1.0/fasta/genome.fa -V child_gvcf -V parent1_gvcf -V parent2_gvcf -o trio_merge.vcf  
+```
+
+Or to generate trio_merge.vcf by using Freebayes, the command is as follows:
+```
+freebayes -f refdata-hg19-2.0.0/fasta/genome.fa NA12878_GRCh37.bam NA12891_GRCh37.bam NA12892_GRCh37.bam  > trio_merge.vcf  
 ```
 
 To split the multiple-sample vcf file, VCFtools which can be download from http://vcftools.sourceforge.net/ can be used as follows: <br />
