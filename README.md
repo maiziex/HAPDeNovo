@@ -16,14 +16,14 @@
 --parent2_id: "20972" <br />
 --parent2_sex: "female" specifies the sex of the second parent. <br />
 --parent2_bam: "NA12892_GRCh37.bam" is the bam file of the second parent. <br />
---output_vcf: "trio_merge.vcf" is name of the multiple-sample variants called vcf file from the trio by freebayes/GATK. User can specifiy this name.
+--output_vcf: "trio_merge.vcf" is a user customized name of the multiple-sample variants called vcf file from the trio by freebayes/GATK.
 <br />
 --child_fastqs: "NA12878.fastqs" is the 10X fastqs file of the child.  <br />
 --parent1_fastqs: "NA12891.fastqs" is the 10X fastqs file of the first parent.  <br />
 --parent2_fastqs: "NA12892.fastqs" is the 10X fastqs file of the second parent.  <br />
 --reference: "refdata-hg19-2.1.0/fasta/genome.fa" is the reference which can be download from https://support.10xgenomics.com/genome-exome/software/downloads/latest (or wget --no-check-certificate https://s3-us-west-2.amazonaws.com/10x.datasets/refdata-hg19-2.1.0.tar.gz).   <br />
 
-The first step performs a multiple-sample variants call by freebayes/GATK. User can also use the following commands to finish it. More information can be found from https://software.broadinstitute.org/gatk/gatkdocs/org_broadinstitute_gatk_tools_walkers_haplotypecaller_HaplotypeCaller.php. 
+# Step 1 performs a multiple-sample variants call by freebayes/GATK. User can also use the following commands to finish it. More information can be found from https://software.broadinstitute.org/gatk/gatkdocs/org_broadinstitute_gatk_tools_walkers_haplotypecaller_HaplotypeCaller.php. 
 <br />
 java -jar GenomeAnalysisTK.jar -T HaplotypeCaller -R refdata-hg19-2.1.0/fasta/genome.fa -I NA12878_GRCh37.bam -o child_gvcf -ERC GVCF  <br />
 java -jar GenomeAnalysisTK.jar -T HaplotypeCaller -R refdata-hg19-2.1.0/fasta/genome.fa -I NA12891_GRCh37.bam -o parent1_gvcf -ERC GVCF  <br />
