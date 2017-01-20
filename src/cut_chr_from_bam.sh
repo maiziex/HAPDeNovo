@@ -82,7 +82,7 @@ do
 
     echo "generate GVCF using GATK haplotypecaller..."
     java -jar GenomeAnalysisTK.jar -T HaplotypeCaller -R $reference -I $output_hp1_sort -o $output_gvcf1 -ERC GVCF
-    java -jar GenomeAnalysisTK-3.6/GenomeAnalysisTK.jar -T HaplotypeCaller -R $reference -I $output_hp2_sort -o $output_gvcf2 -ERC GVCF
-    java -jar GenomeAnalysisTK-3.6/GenomeAnalysisTK.jar -T HaplotypeCaller -R $reference -I $output_nohp_sort -o $output_gvcf3 -ERC GVCF
+    java -jar GenomeAnalysisTK.jar -T HaplotypeCaller -R $reference -I $output_hp2_sort -o $output_gvcf2 -ERC GVCF
+    java -jar GenomeAnalysisTK.jar -T HaplotypeCaller -R $reference -I $output_nohp_sort -o $output_gvcf3 -ERC GVCF
 
 done
