@@ -23,7 +23,7 @@ chr_end=${42}
 
 
 ##### Step 3: split origin bam file to three different type for hp1, hp2, nohp, then use GATK to do variants call
-echo "running Step 4..."
+echo "running Step 3..."
 echo "chr_start="$chr_start" , chr_end="$chr_end
 ./cut_chr_from_bam.sh $sample1_name $sample1_bam $sample1_num $sample1_hp1_num $sample1_hp2_num $sample1_nohp_num $reference $chr_start $chr_end
 ./cut_chr_from_bam.sh $sample2_name $sample2_bam $sample2_num $sample2_hp1_num $sample2_hp2_num $sample2_nohp_num $reference $chr_start $chr_end
@@ -31,7 +31,7 @@ echo "chr_start="$chr_start" , chr_end="$chr_end
 
 for i in `eval echo {$chr_start..$chr_end}`
 do
-    java -jar /scail/u/xzhou15/Softwares/GenomeAnalysisTK-3.6/GenomeAnalysisTK.jar -T GenotypeGVCFs -R $reference -V "$sample1_name"_chr"$i"_hp1.g.vcf -V "$sample1_name"_chr"$i"_hp2.g.vcf -V "$sample1_name"_chr"$i"_nohp.g.vcf -V "$sample2_name"_chr"$i"_hp1.g.vcf -V "$sample2_name"_chr"$i"_hp2.g.vcf -V "$sample2_name"_chr"$i"_nohp.g.vcf -V "$sample3_name"_chr"$i"_hp1.g.vcf -V "$sample3_name"_chr"$i"_hp2.g.vcf -V "$sample3_name"_chr"$i"_nohp.g.vcf  -o chr"$i".vcf
+    java -jar GenomeAnalysisTK.jar -T GenotypeGVCFs -R $reference -V "$sample1_name"_chr"$i"_hp1.g.vcf -V "$sample1_name"_chr"$i"_hp2.g.vcf -V "$sample1_name"_chr"$i"_nohp.g.vcf -V "$sample2_name"_chr"$i"_hp1.g.vcf -V "$sample2_name"_chr"$i"_hp2.g.vcf -V "$sample2_name"_chr"$i"_nohp.g.vcf -V "$sample3_name"_chr"$i"_hp1.g.vcf -V "$sample3_name"_chr"$i"_hp2.g.vcf -V "$sample3_name"_chr"$i"_nohp.g.vcf  -o chr"$i".vcf
 done
 
 rm "$sample1_name"_chr"$i"_hp1.g.vcf
