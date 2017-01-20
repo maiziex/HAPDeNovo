@@ -86,10 +86,10 @@ def find_highconf(input_file,reads_depth):
 
             try:
                 chr_num = data[0]
-                if chr_num == "chr8":
-                    range_fields  = [9,11,13]
-                else:
-                    range_fields = [9,12,15]
+                #if chr_num == "chr8":
+                    #range_fields  = [9,11,13]
+                #else:
+                range_fields = [9,12,15]
                 for field in range_fields:
                     GT_hp1 = data[field].split(":")[0]
                     if GT_hp1 == "./." or GT_hp1 == ".":
