@@ -10,4 +10,4 @@ echo "using "$merged_vcf
 #vcf-subset -c $sample_num $merged_vcf > $output
 vcf-subset -c $merged_vcf 
 
-longranger run --id=$sample_name --sex=$sample_sex --fastqs=$sample_fastqs --reference=$reference --precalled=$output
+longranger wgs --id=$sample_name --sex=$sample_sex --fastqs=$sample_fastqs --reference=$reference --precalled=$output
