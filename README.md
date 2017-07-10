@@ -31,7 +31,7 @@ To split the multiple-sample vcf file: <br />
 vcf-subset -c trio_merge.vcf
 ```
 
-To run phased variants call, all the precalled vcf files are generated from the previous step: <br />
+To run phased variants call, all the precalled vcf files are generated from the previous step, reference can download from <a href="https://support.10xgenomics.com/genome-exome/software/downloads/latest">here</a>: <br />
 ```
 longranger wgs --id=NA12878 --sex=female --fastqs=NA12878.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa --precalled=20976.vcf  
 longranger wgs --id=NA12891 --sex=male --fastqs=NA12891.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa --precalled=20971.vcf  
