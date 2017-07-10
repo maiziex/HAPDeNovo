@@ -8,7 +8,7 @@ git clone https://github.com/HAPDeNovo/HAPDeNovo.git
 ```
 
 ## Dependencies:
-HAPDeNovo utilizes GATK or Freebayes for variants call, Longranger for phased variants call. In addition, it uses python3, VCFtools, SAMtools, and tabix, To be able to execute the above programs by typing their name on the command line, the program executables must be in one of the directories listed in the PATH environment variable.
+HAPDeNovo utilizes GATK or Freebayes for variants call,<a href="http://www.quora.com/Adam-DAngelo">Quora profile link for Adam D'Angelo</a>, Longranger for phased variants call. In addition, it uses python3, VCFtools, SAMtools, and tabix, To be able to execute the above programs by typing their name on the command line, the program executables must be in one of the directories listed in the PATH environment variable.
 
 Python3: https://www.python.org/downloads/  <br />
 GATK: https://software.broadinstitute.org/gatk/download/   <br />
