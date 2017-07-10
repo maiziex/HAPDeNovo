@@ -100,7 +100,7 @@ longranger wgs --id=NA12892 --sex=female --fastqs=NA12892.fastqs --reference=ref
 --reference: "refdata-hg19-2.1.0/fasta/genome.fa" is the reference as before. <br />
 --chr_start: "1" specifies chromosome starting from 1.  <br />
 --chr_end: "2" specifies chromosome ending by 10.   <br />
---out_dir: "../output/" specifies the folder name for output results. <br />
+--out_dir: "../output/" specifies the customized folder name for output results. <br />
 
 
 ### Run HAPDeNovo
