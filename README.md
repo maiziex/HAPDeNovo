@@ -18,7 +18,7 @@ tabix: https://sourceforge.net/projects/samtools/files/tabix/   <br />
 #### To be able to execute the above programs by typing their name on the command line, the program executables must be in one of the directories listed in the PATH environment variable.
 
 ## Running The Code:
-#### Step 1 performs a multiple-sample variants call by freebayes/GATK. Multiple-sample called vcf file then is splitted into three single sample vcf files. The single sample vcf is further applied to Longranger as the precalled vcf to make the phased variants call. Alternatively, user can also use the following commands to finish this step. <br />
+#### Step 1 performs a multiple-sample variants call by freebayes/GATK. Multiple-sample called vcf file then is splitted into three single sample vcf files. The single sample vcf is further applied to Longranger as the precalled vcf to make the phased variants call.  <br />
 For GATK, more information can be found from https://software.broadinstitute.org/gatk/gatkdocs/org_broadinstitute_gatk_tools_walkers_haplotypecaller_HaplotypeCaller.php. 
 <br />
 ```
