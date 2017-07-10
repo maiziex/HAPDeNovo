@@ -85,30 +85,21 @@ longranger wgs --id=NA12892 --sex=female --fastqs=NA12892.fastqs --reference=ref
 
 ### Step3:
 ```
-./run_denovo_step3.sh --child NA12878 --parent1 NA12891 --parent2 NA12892 --child_id 20976 --child_hp1_id 20000 --child_hp2_id 20001 --child_nohp_id 20002 --parent1_id 20971 --parent1_hp1_id 20003 --parent1_hp2_id 20004 --parent1_nohp_id 20005 --parent2_id 20972 --parent2_hp1_id 20006 --parent2_hp2_id 20007 --parent2_nohp_id 20008 --child_bam NA12878_GRCh37.bam --parent1_bam NA12891_GRCh37.bam --parent2_bam NA12892_GRCh37.bam --reference refdata-hg19-2.1.0/fasta/genome.fa --chr_start 1 --chr_end 10
+./Run_HAPDeNovo_step3.sh --child NA12878 --parent1 NA12891 --parent2 NA12892 --child_id 20976 --parent1_id 20971 --parent2_id 20972 --child_bam NA12878_GRCh37.bam --parent1_bam NA12891_GRCh37.bam --parent2_bam NA12892_GRCh37.bam --child_vcf NA12878_phased_variants.vcf.gz --parent1_vcf NA12891_phased_variants.vcf.gz --parent2_vcf NA12892_phased_variants.vcf.gz --reference refdata-hg19-2.1.0/fasta/genome.fa --chr_start 1 --chr_end 2 --out_dir ../output/ --output_prefix HAPDeNovo_result
 ```
 
 --child: "NA12878" is the origin sample id of the child.  <br />
 --parent1: "NA12891" is the origin sample id of the first parent.  <br />
 --parent2: "NA12892" is the origin sample id of the second parent.  <br />
 --child_id: "20976" is the sample id from the header of the bam file for child.<br />
---child_hp1_id: "20000" is the user customized child id for the first haplotype.  <br />
---child_hp2_id" "20001" is the user customized child id for the second haplotype.  <br /> 
---child_nohp_id: "20002" is the user customized child id for the undefined haplotype. <br />
 --parent1_id: "20971" is the sample id from the header of the bam file for the first parent. <br />
---parent1_hp1_id: "20003" is the user customized first parent id for the first haplotype.  <br />
---parent1_hp2_id: "20004" is the user customized first parent id for the second haplotype.  <br />
---parent1_nohp_id: "20005" is the user customized first parent id for the undefined haplotype.  <br /> 
 --parent2_id: "20972" is the sample id from the header of the bam file for second parent. <br />
---parent2_hp1_id: "20006" is the user customized second parent id for the first haplotype.  <br />
---parent2_hp2_id: "20007" is the user customized second parent id for the second haplotype.  <br />
---parent2_nohp_id: "20008" is the user customized second parent id for the undefined haplotype.  <br /> 
 --child_bam: "NA12878_GRCh37.bam" is the bam file of the child. <br />
 --parent1_bam: "NA12891_GRCh37.bam" is the bam file of the first parent. <br />
 --parent2_bam: "NA12892_GRCh37.bam" is the bam file of the second parent. <br />
 --reference: "refdata-hg19-2.1.0/fasta/genome.fa" is the reference as before. <br />
 --chr_start: "1" specifies chromosome starting from 1.  <br />
---chr_end: "10" specifies chromosome ending by 10.   <br />
+--chr_end: "2" specifies chromosome ending by 10.   <br />
 
 
 ### Run HAPDeNovo
