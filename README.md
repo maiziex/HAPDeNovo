@@ -82,7 +82,8 @@ python3 HAPDeNovo.py --chr_start 1 --chr_end 22 --child_id 20976 --parent1_id 20
 --child_id: "20976" is the sample id from the header of the bam file for child.  <br />
 --parent1_id: "20971" is the sample id from the header of the bam file for first parent. <br />
 --parent2_id: "20972" is the sample id from the header of the bam file for second parent.  <br />
---output: "denovo_triodenovo_depth15_HAPDeNovo_filer1.txt" is the user customized file name for final de novo mutation output. <br />
+--out_dir: "../output/" specifies the customized folder name for output results. <br />
+--output_prefix: "denovo_triodenovo_depth15_HAPDeNovo_filer1" is the user customized file name for final de novo mutation output. <br />
 --depth: "1" specifies the depth filter by 1. <br />
 --input_denovo: "denovo_triodenovo_depth15_DQ7.txt" is the de novo results from other tools like GATK/freebayes/TrioDenovo/DeNovoGear, or any user customized txt file for de novo muations. This text file needs to contain chromose name and the corresponding locus per row for each de novo mutation. <br />
 
