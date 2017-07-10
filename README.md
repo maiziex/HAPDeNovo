@@ -18,30 +18,6 @@ tabix: https://sourceforge.net/projects/samtools/files/tabix/   <br />
 #### To be able to execute the above programs by typing their name on the command line, the program executables must be in one of the directories listed in the PATH environment variable.
 
 ## Running The Code:
-### Step1:
-```
-./run_denovo_step1.sh --child NA12878 --child_id 20976 --child_sex female --child_bam NA12878_GRCh37.bam --parent1 NA12891 --parent1_id 20971 --parent1_sex male --parent1_bam NA12891_GRCh37.bam --parent2 NA12892 --parent2_id 20972 --parent2_sex female --parent2_bam NA12892_GRCh37.bam --output_vcf trio_merge.vcf --child_fastqs NA12878.fastqs --parent1_fastqs NA12891.fastqs --parent2_fastqs NA12892.fastqs  --reference refdata-hg19-2.1.0/fasta/genome.fa
-```
-
---child: "NA12878" is the origin sample id of the child.  <br />
---child_id: "20976" is the sample id from the header of the bam file for child. <br />
---child_sex: "female" specifies the sex of the child. <br />
---child_bam: "NA12878_GRCh37.bam" is the bam file of the child. <br />
---parent1: "NA12891" is the origin sample id of the first parent.  <br />
---parent1_id: "20971" is the sample id from the header of the bam file for the first parent. <br />
---parent1_sex: "male" specifies the sex of the first parent. <br />
---parent1_bam: "NA12891_GRCh37.bam" is the bam file of the first parent. <br />
---parent2: "NA12892" is the origin sample id of the second parent.  <br />
---parent2_id: "20972" is the sample id from the header of the bam file for the second parent<br />
---parent2_sex: "female" specifies the sex of the second parent. <br />
---parent2_bam: "NA12892_GRCh37.bam" is the bam file of the second parent. <br />
---output_vcf: "trio_merge.vcf" is a user customized name of the multiple-sample variants called vcf file from the trio by freebayes/GATK.
-<br />
---child_fastqs: "NA12878.fastqs" is the 10X fastqs file of the child.  <br />
---parent1_fastqs: "NA12891.fastqs" is the 10X fastqs file of the first parent.  <br />
---parent2_fastqs: "NA12892.fastqs" is the 10X fastqs file of the second parent.  <br />
---reference: "refdata-hg19-2.1.0/fasta/genome.fa" is the reference which can be download from https://support.10xgenomics.com/genome-exome/software/downloads/latest (or wget --no-check-certificate https://s3-us-west-2.amazonaws.com/10x.datasets/refdata-hg19-2.1.0.tar.gz).   <br />
-
 #### Step 1 performs a multiple-sample variants call by freebayes/GATK. Multiple-sample called vcf file then is splitted into three single sample vcf files. The single sample vcf is further applied to Longranger as the precalled vcf to make the phased variants call. Alternatively, user can also use the following commands to finish this step. <br />
 For GATK, more information can be found from https://software.broadinstitute.org/gatk/gatkdocs/org_broadinstitute_gatk_tools_walkers_haplotypecaller_HaplotypeCaller.php. 
 <br />
