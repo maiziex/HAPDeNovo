@@ -8,15 +8,7 @@ git clone https://github.com/HAPDeNovo/HAPDeNovo.git
 ```
 
 ## Dependencies:
-HAPDeNovo utilizes <a href="https://software.broadinstitute.org/gatk/download/">GATK</a> or <a href="https://github.com/ekg/freebayes">Freebayes</a> for variants call, <a href="https://support.10xgenomics.com/genome-exome/software/downloads/latest">Longranger</a> for phased variants call. In addition, it uses <a href="https://www.python.org/downloads/">Python3</a>, <a href="http://vcftools.sourceforge.net/">VCFtools</a>, <a href="http://samtools.sourceforge.net/">SAMtools</a>, and <a href="https://sourceforge.net/projects/samtools/files/tabix/">tabix</a>, To be able to execute the above programs by typing their name on the command line, the program executables must be in one of the directories listed in the PATH environment variable.
-
-Python3: https://www.python.org/downloads/  <br />
-GATK: https://software.broadinstitute.org/gatk/download/   <br />
-Freebayes: https://github.com/ekg/freebayes   <br />
-Longranger: https://support.10xgenomics.com/genome-exome/software/downloads/latest  <br />
-VCFtools: http://vcftools.sourceforge.net/ <br />
-SAMtools: http://samtools.sourceforge.net/  <br />
-tabix: https://sourceforge.net/projects/samtools/files/tabix/   <br />
+HAPDeNovo utilizes <a href="https://software.broadinstitute.org/gatk/download/">GATK</a> or <a href="https://github.com/ekg/freebayes">Freebayes</a> for variants call, <a href="https://support.10xgenomics.com/genome-exome/software/downloads/latest">Longranger</a> for phased variants call. In addition, it uses <a href="https://www.python.org/downloads/">Python3</a>, <a href="http://vcftools.sourceforge.net/">VCFtools</a>, <a href="http://samtools.sourceforge.net/">SAMtools</a>, and <a href="https://sourceforge.net/projects/samtools/files/tabix/">tabix</a>. To be able to execute the above programs by typing their name on the command line, the program executables must be in one of the directories listed in the PATH environment variable.
 
 ## Running The Code:
 #### Step 1 performs a multiple-sample variants call by freebayes/GATK. Multiple-sample called vcf file then is splitted into three single sample vcf files. The single sample vcf is further applied to Longranger as the precalled vcf to make the phased variants call.  <br />
