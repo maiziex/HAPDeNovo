@@ -26,7 +26,7 @@ Or to generate trio_merge.vcf by using Freebayes, the command is as follows:
 freebayes -f refdata-hg19-2.0.0/fasta/genome.fa NA12878_GRCh37.bam NA12891_GRCh37.bam NA12892_GRCh37.bam  > trio_merge.vcf  
 ```
 
-To split the multiple-sample vcf file, VCFtools which can be download from http://vcftools.sourceforge.net/ can be used as follows: <br />
+To split the multiple-sample vcf file: <br />
 ```
 vcf-subset -c trio_merge.vcf
 ```
