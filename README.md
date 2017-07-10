@@ -85,7 +85,7 @@ longranger wgs --id=NA12892 --sex=female --fastqs=NA12892.fastqs --reference=ref
 
 ### Step3:
 ```
-./Run_HAPDeNovo_step3.sh --child NA12878 --parent1 NA12891 --parent2 NA12892 --child_id 20976 --parent1_id 20971 --parent2_id 20972 --child_bam NA12878_GRCh37.bam --parent1_bam NA12891_GRCh37.bam --parent2_bam NA12892_GRCh37.bam --reference refdata-hg19-2.1.0/fasta/genome.fa --chr_start 1 --chr_end 2 --out_dir ../output/ --output_prefix HAPDeNovo_result
+./Run_HAPDeNovo_step3.sh --child NA12878 --parent1 NA12891 --parent2 NA12892 --child_id 20976 --parent1_id 20971 --parent2_id 20972 --child_bam NA12878_GRCh37.bam --parent1_bam NA12891_GRCh37.bam --parent2_bam NA12892_GRCh37.bam --reference refdata-hg19-2.1.0/fasta/genome.fa --chr_start 1 --chr_end 2 --out_dir ../output/
 ```
 
 --child: "NA12878" is the origin sample id of the child.  <br />
@@ -100,6 +100,7 @@ longranger wgs --id=NA12892 --sex=female --fastqs=NA12892.fastqs --reference=ref
 --reference: "refdata-hg19-2.1.0/fasta/genome.fa" is the reference as before. <br />
 --chr_start: "1" specifies chromosome starting from 1.  <br />
 --chr_end: "2" specifies chromosome ending by 10.   <br />
+--out_dir: "../output/" specifies the folder name for output results. <br />
 
 
 ### Run HAPDeNovo
