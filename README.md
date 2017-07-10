@@ -73,7 +73,7 @@ longranger wgs --id=NA12892 --sex=female --fastqs=NA12892.fastqs --reference=ref
 --out_dir: "../output/" specifies the customized folder name for output results. <br />
 
 
-### Run HAPDeNovo
+### Run final HAPDeNovo.py
 ```
 python3 HAPDeNovo.py --chr_start 1 --chr_end 22 --child_id 20976 --parent1_id 20971 --parent2_id 20972 --out_dir ../output/ --output_prefix denovo_triodenovo_depth15_HAPDeNovo_filer1 --depth 1 --input_denovo ../doc/denovo_triodenovo_depth15_DQ7.txt
 ```
