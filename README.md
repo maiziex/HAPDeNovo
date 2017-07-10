@@ -81,18 +81,17 @@ longranger wgs --id=NA12892 --sex=female --fastqs=NA12892.fastqs --reference=ref
 
 ### Run HAPDeNovo
 ```
-python3 HAPDeNovo.py --chr_start 1 --chr_end 10 --child_id 20976 --parent1_id 20971 --parent2_id 20972 --phased_vcf_prefix trio_mergecall_10x_phased --output denovo_triodenovo_depth15_HAPDeNovo_filer1.txt --depth 1 --input_denovo denovo_triodenovo_depth15_DQ7.txt --input_file_dir ../doc
+python3 HAPDeNovo.py --chr_start 1 --chr_end 22 --child_id 20976 --parent1_id 20971 --parent2_id 20972 --out_dir ../output/ --output_prefix denovo_triodenovo_depth15_HAPDeNovo_filer1 --depth 1 --input_denovo ../doc/denovo_triodenovo_depth15_DQ7.txt
 ```
 --chr_start: "1" specifies chromosome starting from 1.  <br />
---chr_end: "10" specifies chromosome ending by 10.   <br />
+--chr_end: "22" specifies chromosome ending by 22.   <br />
 --child_id: "20976" is the sample id from the header of the bam file for child.  <br />
 --parent1_id: "20971" is the sample id from the header of the bam file for first parent. <br />
 --parent2_id: "20972" is the sample id from the header of the bam file for second parent.  <br />
---phased_vcf_prefix: "trio_mergecall_10x_phased" is the user customized prefix of the vcf file for each chromosome from step 2.  <br />
---output: "denovo_triodenovo_depth15_HAPDeNovo_filer1.txt" is the user customized txt file name for final de novo mutation output. <br />
+--output: "denovo_triodenovo_depth15_HAPDeNovo_filer1.txt" is the user customized file name for final de novo mutation output. <br />
 --depth: "1" specifies the depth filter by 1. <br />
 --input_denovo: "denovo_triodenovo_depth15_DQ7.txt" is the de novo results from other tools like GATK/freebayes/TrioDenovo/DeNovoGear, or any user customized txt file for de novo muations. This text file needs to contain chromose name and the corresponding locus per row for each de novo mutation. <br />
---input_file_dir: "../doc" specifies the directory folder for the input_denovo file.  <br />
+
 
 
 #### The output format of HAPDeNovo:
