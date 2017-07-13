@@ -10,7 +10,7 @@ out_file_prefix=${14}
 
 ##### Step 3: split origin bam file to three different type for hp1, hp2, nohp, then use GATK to do variants call
 
-java -jar /scratch/users/xzhou15/Software/GenomeAnalysisTK-3.6/GenomeAnalysisTK.jar -T GenotypeGVCFs -R $reference -V "$out_dir""$sample1_name"_chr"$chr_num"_hp1.g.vcf -V "$out_dir""$sample1_name"_chr"$chr_num"_hp2.g.vcf -V "$out_dir""$sample1_name"_chr"$chr_num"_nohp.g.vcf -V "$out_dir""$sample2_name"_chr"$chr_num"_hp1.g.vcf -V "$out_dir""$sample2_name"_chr"$chr_num"_hp2.g.vcf -V "$out_dir""$sample2_name"_chr"$chr_num"_nohp.g.vcf -V "$out_dir""$sample3_name"_chr"$chr_num"_hp1.g.vcf -V "$out_dir""$sample3_name"_chr"$chr_num"_hp2.g.vcf -V "$out_dir""$sample3_name"_chr"$chr_num"_nohp.g.vcf -o "$out_dir""$out_file_prefix"_chr"$chr_num".vcf
+java -jar GenomeAnalysisTK.jar -T GenotypeGVCFs -R $reference -V "$out_dir""$sample1_name"_chr"$chr_num"_hp1.g.vcf -V "$out_dir""$sample1_name"_chr"$chr_num"_hp2.g.vcf -V "$out_dir""$sample1_name"_chr"$chr_num"_nohp.g.vcf -V "$out_dir""$sample2_name"_chr"$chr_num"_hp1.g.vcf -V "$out_dir""$sample2_name"_chr"$chr_num"_hp2.g.vcf -V "$out_dir""$sample2_name"_chr"$chr_num"_nohp.g.vcf -V "$out_dir""$sample3_name"_chr"$chr_num"_hp1.g.vcf -V "$out_dir""$sample3_name"_chr"$chr_num"_hp2.g.vcf -V "$out_dir""$sample3_name"_chr"$chr_num"_nohp.g.vcf -o "$out_dir""$out_file_prefix"_chr"$chr_num".vcf
 
 rm "$out_dir""$sample1_name"_chr"$chr_num"_hp1.g.vcf*
 rm "$out_dir""$sample1_name"_chr"$chr_num"_hp2.g.vcf*
