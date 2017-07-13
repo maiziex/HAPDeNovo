@@ -79,9 +79,9 @@ do
     rm $out_dir$header3
 
     echo "generate GVCF using GATK haplotypecaller..."
-    java -jar /scratch/users/xzhou15/Software/GenomeAnalysisTK-3.6/GenomeAnalysisTK.jar -T HaplotypeCaller -R $reference -I $out_dir$output_hp1_sort -o $out_dir$output_gvcf1 -ERC GVCF
-    java -jar /scratch/users/xzhou15/Software/GenomeAnalysisTK-3.6/GenomeAnalysisTK.jar -T HaplotypeCaller -R $reference -I $out_dir$output_hp2_sort -o $out_dir$output_gvcf2 -ERC GVCF
-    java -jar /scratch/users/xzhou15/Software/GenomeAnalysisTK-3.6/GenomeAnalysisTK.jar -T HaplotypeCaller -R $reference -I $out_dir$output_nohp_sort -o $out_dir$output_gvcf3 -ERC GVCF
+    java -jar GenomeAnalysisTK.jar -T HaplotypeCaller -R $reference -I $out_dir$output_hp1_sort -o $out_dir$output_gvcf1 -ERC GVCF
+    java -jar GenomeAnalysisTK.jar -T HaplotypeCaller -R $reference -I $out_dir$output_hp2_sort -o $out_dir$output_gvcf2 -ERC GVCF
+    java -jar GenomeAnalysisTK.jar -T HaplotypeCaller -R $reference -I $out_dir$output_nohp_sort -o $out_dir$output_gvcf3 -ERC GVCF
 
     rm $out_dir$output_hp1_sort
     rm $out_dir$output_hp1_sort".bai"
