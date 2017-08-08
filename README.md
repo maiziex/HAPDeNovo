@@ -74,8 +74,9 @@ longranger wgs --id=NA12892 --sex=female --fastqs=NA12892.fastqs --reference=ref
 
 
 ### Run final HAPDeNovo.py
+Type "python HAPDeNovo -h" to check help information
 ```
-python3 HAPDeNovo.py --chr_start 1 --chr_end 22 --child_id 20976 --parent1_id 20971 --parent2_id 20972 --out_dir ../output/ --output_prefix denovo_triodenovo_depth15_HAPDeNovo_filer1 --depth 1 --input_denovo ../doc/denovo_triodenovo_depth15_DQ7.txt
+python3 HAPDeNovo.py --chr_start 1 --chr_end 22 --child_id 20976 --parent1_id 20971 --parent2_id 20972 --out_dir ../output/ --output_file_prefix denovo_triodenovo_depth15_HAPDeNovo_filer1 --depth 1 --input_file ../doc/denovo_triodenovo_depth15_DQ7.txt
 ```
 --chr_start: "1" specifies chromosome starting from 1.  <br />
 --chr_end: "22" specifies chromosome ending by 22.   <br />
@@ -83,9 +84,9 @@ python3 HAPDeNovo.py --chr_start 1 --chr_end 22 --child_id 20976 --parent1_id 20
 --parent1_id: "20971" is the sample id from the header of the bam file for first parent. <br />
 --parent2_id: "20972" is the sample id from the header of the bam file for second parent.  <br />
 --out_dir: "../output/" specifies the customized folder name for output results. <br />
---output_prefix: "denovo_triodenovo_depth15_HAPDeNovo_filer1" is the user customized file name for final de novo mutation output. <br />
+--output_file_prefix: "denovo_triodenovo_depth15_HAPDeNovo_filer1" is the user customized file name for final de novo mutation output. <br />
 --depth: "1" specifies the depth filter by 1. <br />
---input_denovo: "denovo_triodenovo_depth15_DQ7.txt" is the de novo results from other tools like GATK/freebayes/TrioDenovo/DeNovoGear, or any user customized txt file for de novo muations. This text file needs to contain chromose name and the corresponding locus per row for each de novo mutation. <br />
+--input_file: "denovo_triodenovo_depth15_DQ7.txt" is the de novo results from other tools like GATK/freebayes/TrioDenovo/DeNovoGear, or any user customized txt file for de novo muations. This text file needs to contain chromose name and the corresponding locus per row for each de novo mutation. <br />
 
 
 
