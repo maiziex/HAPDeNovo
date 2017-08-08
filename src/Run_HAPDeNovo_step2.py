@@ -18,7 +18,7 @@ if __name__ == "__main__":
         os.system("python Run_HAPDeNovo_step2.py -h")
     else:
         used_command = "./Run_HAPDeNovo_step2.sh --child_vcf " + args.child_vcf + " --parent1_vcf " + args.parent1_vcf + " --parent2_vcf " + args.parent2_vcf + " --chr_start " + str(args.chr_start) + " --chr_end " + str(args.chr_end) + " --out_dir " + args.out_dir
-        os.system("chmod +x Run_HAPDeNovo_step2.sh")
+        os.system("chmod +x *.sh")
         os.system(used_command)
 
 
