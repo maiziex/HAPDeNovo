@@ -74,7 +74,7 @@ longranger wgs --id=NA12892 --sex=female --fastqs=NA12892.fastqs --reference=ref
 
 
 ### Run final HAPDeNovo.py
-Type "python HAPDeNovo -h" to check help information
+Type "python HAPDeNovo.py -h" to check help information
 ```
 python3 HAPDeNovo.py --chr_start 1 --chr_end 22 --child_id 20976 --parent1_id 20971 --parent2_id 20972 --out_dir ../output/ --output_file_prefix denovo_triodenovo_depth15_HAPDeNovo_filer1 --depth 1 --input_file ../doc/denovo_triodenovo_depth15_DQ7.txt
 ```
