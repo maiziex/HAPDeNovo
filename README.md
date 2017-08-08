@@ -39,8 +39,7 @@ longranger wgs --id=NA12891 --sex=male --fastqs=NA12891.fastqs --reference=refda
 longranger wgs --id=NA12892 --sex=female --fastqs=NA12892.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa --precalled=20972.vcf  
 ```
 
-### Step 2:
-Type "python Run_HAPDeNovo_step2.py -h" for help information
+### Step 2: (Type "python Run_HAPDeNovo_step2.py -h" for help information)
 ```
 ./Run_HAPDeNovo_step2.py --child_vcf NA12878_phased_variants.vcf.gz --parent1_vcf NA12891_phased_variants.vcf.gz --parent2_vcf NA12892_phased_variants.vcf.gz --chr_start 1 --chr_end 2 --out_dir ../output/
 ```
@@ -74,7 +73,7 @@ Type "python Run_HAPDeNovo_step2.py -h" for help information
 --out_dir: "../output/" specifies the customized folder name for output results. <br />
 
 
-### Run final HAPDeNovo.py   (Type "python HAPDeNovo.py -h" for help information)
+### Run final HAPDeNovo.py(Type "python HAPDeNovo.py -h" for help information)
 
 ```
 python3 HAPDeNovo.py --chr_start 1 --chr_end 22 --child_id 20976 --parent1_id 20971 --parent2_id 20972 --out_dir ../output/ --output_file_prefix denovo_triodenovo_depth15_HAPDeNovo_filer1 --depth 1 --input_file ../doc/denovo_triodenovo_depth15_DQ7.txt
