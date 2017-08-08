@@ -11,7 +11,7 @@ git clone https://github.com/HAPDeNovo/HAPDeNovo.git
 HAPDeNovo utilizes <a href="https://software.broadinstitute.org/gatk/download/">GATK</a> or <a href="https://github.com/ekg/freebayes">Freebayes</a> for variants call, <a href="https://support.10xgenomics.com/genome-exome/software/downloads/latest">Longranger</a> for phased variants call. In addition, it uses <a href="https://www.python.org/downloads/">Python3</a>, <a href="http://vcftools.sourceforge.net/">VCFtools</a>, <a href="http://samtools.sourceforge.net/">SAMtools</a>, and <a href="https://sourceforge.net/projects/samtools/files/tabix/">tabix</a>. To be able to execute the above programs by typing their name on the command line, the program executables must be in one of the directories listed in the PATH environment variable.
 
 ## Running The Code:
-### Step 1 
+### Step 1:
 #### Performs a multiple-sample variants call by freebayes/GATK. Multiple-sample called vcf file then is splitted into three single sample vcf files. The single sample vcf is further applied to Longranger as the precalled vcf to make the phased variants call.  <br />
 For GATK, more information can be found from <a href="https://software.broadinstitute.org/gatk/documentation/tooldocs/current/org_broadinstitute_gatk_tools_walkers_haplotypecaller_HaplotypeCaller.php">here</a>. 
 <br />
