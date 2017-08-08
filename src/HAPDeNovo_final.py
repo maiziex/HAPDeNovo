@@ -272,7 +272,7 @@ def find_denovo_mut(vcf_file,threehps_vcf,reads_depth,fw,child_num,parent1_num,p
     
 if __name__ == "__main__":
     if len(sys.argv) == 1:
-        os.system("python HAPDeNovo.py -h")
+        os.system("python HAPDeNovo_final.py -h")
     else:
         chr_start = args.chr_start
         chr_end = args.chr_end
