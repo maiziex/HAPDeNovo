@@ -6,13 +6,13 @@ import os
 
 from argparse import ArgumentParser
 
-parser = ArgumentParser(description="HAPDeNovo")
+parser = ArgumentParser(description="Final Step of HAPDeNovo")
 parser.add_argument('--chr_start','-c_start',type=int,help="chromosome start from", default=1)
 parser.add_argument('--chr_end','-c_end',type=int,help="chromosome end at", default=1)
 parser.add_argument('--depth','-d', type=int, help="Filter Depth", default=1)
 parser.add_argument('--input_file','-i', help="Input DNMs file from other tools like FreeBayes, TrioDeNovo, and etc")
-parser.add_argument('--output_file_prefix','-o', help="output file prefix", default='HAPDeNovo_Results')
-parser.add_argument('--out_dir','-o_dir', help="Directory to store outputs", default='HAPDeNovo_Results')
+parser.add_argument('--output_file_prefix','-o', help="output file prefix", default='HAPDeNovo_Result')
+parser.add_argument('--out_dir','-o_dir', help="Directory to store outputs", default='../HAPDeNovo_Results/')
 parser.add_argument('--child_id','-c', help="child id")
 parser.add_argument('--parent1_id','-p1', help="parent1 id")
 parser.add_argument('--parent2_id','-p2', help="parent2 id")
