@@ -2,7 +2,7 @@ import sys
 import os
 
 from argparse import ArgumentParser
-
+os.system("chmod +x *.sh")
 parser = ArgumentParser(description="Step2 of HAPDeNovo")
 parser.add_argument('--chr_start','-c_start',type=int,help="chromosome start from", default=1)
 parser.add_argument('--chr_end','-c_end',type=int,help="chromosome end at", default=1)
