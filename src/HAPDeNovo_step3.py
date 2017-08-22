@@ -3,7 +3,7 @@ import os
 
 from argparse import ArgumentParser
 
-parser = ArgumentParser(description="Step2 of HAPDeNovo:")
+parser = ArgumentParser(description="Step3 of HAPDeNovo:")
 parser.add_argument('--chr_start','-c_start',type=int,help="Chromosome start from", default=1)
 parser.add_argument('--chr_end','-c_end',type=int,help="Chromosome end at", default=1)
 parser.add_argument('--child','-c', help="The origin sample id of the child, for example: NA12878")
