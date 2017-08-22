@@ -1,4 +1,4 @@
-# Get raw DNMs file from other tools like TrioDeNovo, GATK and etc
+### Get raw DNMs file from other tools like TrioDeNovo, GATK and etc
 
 ## Running The Code:
 
