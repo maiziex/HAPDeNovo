@@ -40,11 +40,6 @@ Or to generate trio_merge.vcf by using Freebayes:
 ../lib/freebayes/bin/freebayes -f refdata-hg19-2.0.0/fasta/genome.fa NA12878_GRCh37.bam NA12891_GRCh37.bam NA12892_GRCh37.bam  > trio_merge.vcf  
 ```
 
-To split the multiple-sample vcf file: <br />
-```
-../lib/vcftools/src/perl/vcf-subset -c trio_merge.vcf
-```
-
 
 
 ### Step 2: (Type "python HAPDeNovo_step2.py -h" for help information)
