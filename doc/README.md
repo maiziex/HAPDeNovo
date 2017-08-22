@@ -1,6 +1,6 @@
 ### Get raw DNMs file from other tools like TrioDeNovo, GATK and etc
 
-## Run TrioDeNovo, more info about TrioDeNovo, check it's website:
+#### Run TrioDeNovo, more info about TrioDeNovo, check it's website:
 
 ```
 ../lib/triodenovo/bin/triodenovo --ped trio.ped  --in_vcf ../example/trio_merge.vcf --out_vcf trio.denovo.vcf_depth15_DQ7.out --minDepth 15 --minDQ 7
@@ -8,7 +8,8 @@
 --in_vcf: "trio_merge.vcf" is variant calling format file from FreeBayes. <br />
 
 
-### Preprocess TrioDeNovo result file for HAPDeNovo: (Type "python Preprocess_triodenovo_results.py -h" for help information)
+#### Preprocess TrioDeNovo result file for HAPDeNovo:
+#### (Type "python Preprocess_triodenovo_results.py -h" for help information)
 ```
 python3 Preprocess_triodenovo_results.py -i trio.denovo.vcf_depth15_DQ7.out -o denovo_triodenovo_depth15_DQ7.txt --child_id 20976 --parent1_id 20971 --parent2_id 20972
 ```
