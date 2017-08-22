@@ -85,7 +85,7 @@ python3 HAPDeNovo_step3.py --child NA12878 --parent1 NA12891 --parent2 NA12892 -
 ### Run HAPDeNovo_final.py: (Type "python HAPDeNovo_final.py -h" for help information)
 
 ```
-python3 HAPDeNovo_final.py --chr_start 1 --chr_end 22 --child_id 20976 --parent1_id 20971 --parent2_id 20972 --out_dir ../output/ --output_file_prefix denovo_triodenovo_depth15_HAPDeNovo_filer1 --depth 1 --input_file ../example/denovo_triodenovo_depth15_DQ7.txt
+python3 HAPDeNovo_final.py --chr_start 1 --chr_end 22 --child_id 20976 --parent1_id 20971 --parent2_id 20972 --out_dir ../output/ --output_file_prefix denovo_triodenovo_depth15_HAPDeNovo_filer1 --depth 1 --input_file ../example/trio_merge.vcf
 ```
 --chr_start: "1" specifies chromosome starting from 1.  <br />
 --chr_end: "22" specifies chromosome ending by 22.   <br />
@@ -95,7 +95,7 @@ python3 HAPDeNovo_final.py --chr_start 1 --chr_end 22 --child_id 20976 --parent1
 --out_dir: "../output/" specifies the customized folder name for output results. <br />
 --output_file_prefix: "denovo_triodenovo_depth15_HAPDeNovo_filer1" is the user customized file name for final de novo mutation output. <br />
 --depth: "1" specifies the depth filter by 1. <br />
---input_file: "denovo_triodenovo_depth15_DQ7.txt" is the de novo results from other tools like GATK/freebayes/TrioDenovo/DeNovoGear, or any user customized txt file for de novo muations. This text file needs to contain chromose name and the corresponding locus per row for each de novo mutation. <br />
+--input_file: "trio_merge.vcf" is the variant call file from freebayes (default). This input can also be the de novo results from other tools like GATK/TrioDenovo/DeNovoGear, or any user customized txt file for de novo muations. This text file only needs to contain chromose name and the corresponding locus per row for each de novo mutation. <br />
 
 
 
