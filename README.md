@@ -9,6 +9,7 @@ git clone https://github.com/HAPDeNovo/HAPDeNovo.git
 To download referece files, go to <a href="https://support.10xgenomics.com/genome-exome/software/downloads/latest">10X GENOMICS Website</a>, or
 ```
 wget http://cf.10xgenomics.com/supp/genome/refdata-hg19-2.1.0.tar.gz
+tar -xzvf refdata-hg19-2.1.0.tar.gz
 ```
 ## Install:
 ```
