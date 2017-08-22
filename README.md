@@ -18,7 +18,11 @@ chmod +x install.sh
 ./install.sh
 ```
 
-## Running The Code, the working directory is "src":
+## Running The Code:
+#### src: the working directory
+#### lib: includes all the tools needed
+#### example: includes files to be tested if need
+
 ### Step 1:
 
 Input are 10X fastqs files, to get bam files and phased vcf files: 
