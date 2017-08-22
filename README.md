@@ -19,9 +19,9 @@ chmod +x install.sh
 ```
 
 ## Running The Code:
-#### src: the working directory
-#### lib: includes all the tools needed
-#### example: includes files to be tested if need
+##### src: the working directory
+##### lib: includes all the tools needed
+##### example: includes files to be tested if need
 
 ### Step 1:
 
