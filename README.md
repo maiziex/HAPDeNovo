@@ -17,7 +17,7 @@ chmod +x install.sh
 ### Step 1:
 To download referece files, go to <a href="https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest">10X GENOMICS Website</a>, or
 ```
-wget http://cf.10xgenomics.com/supp/cell-exp/refdata-cellranger-hg19-1.2.0.tar.gz
+wget http://cf.10xgenomics.com/supp/genome/refdata-hg19-2.1.0.tar.gz
 ```
 To get bam files, phased variants vcf files: 
 ```
