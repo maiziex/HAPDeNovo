@@ -19,7 +19,7 @@ To download referece files, go to <a href="https://support.10xgenomics.com/singl
 ```
 wget http://cf.10xgenomics.com/supp/genome/refdata-hg19-2.1.0.tar.gz
 ```
-To get bam files, phased variants vcf files: 
+Input are fastqs files, to get bam files, phased vcf files: 
 ```
 ../lib/longranger/longranger wgs --id=NA12878 --sex=female --fastqs=NA12878.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa 
 ../lib/longranger/longranger wgs --id=NA12891 --sex=male --fastqs=NA12891.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa  
