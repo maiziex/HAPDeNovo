@@ -6,6 +6,10 @@ HAPDeNovo is a software package to detect de novo mutations on barcoded read-clo
 ```
 git clone https://github.com/HAPDeNovo/HAPDeNovo.git
 ```
+To download referece files, go to <a href="https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest">10X GENOMICS Website</a>, or
+```
+wget http://cf.10xgenomics.com/supp/genome/refdata-hg19-2.1.0.tar.gz
+```
 ## Install:
 ```
 cd HAPDeNovo
@@ -15,10 +19,7 @@ chmod +x install.sh
 
 ## Running The Code, the working directory is "src":
 ### Step 1:
-To download referece files, go to <a href="https://support.10xgenomics.com/single-cell-gene-expression/software/downloads/latest">10X GENOMICS Website</a>, or
-```
-wget http://cf.10xgenomics.com/supp/genome/refdata-hg19-2.1.0.tar.gz
-```
+
 Input are 10X fastqs files, to get bam files and phased vcf files: 
 ```
 ../lib/longranger/longranger wgs --id=NA12878 --sex=female --fastqs=NA12878.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa 
