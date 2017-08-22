@@ -25,7 +25,7 @@ Input are 10X fastqs files, to get bam files and phased vcf files:
 ../lib/longranger/longranger wgs --id=NA12891 --sex=male --fastqs=NA12891.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa  
 ../lib/longranger/longranger wgs --id=NA12892 --sex=female --fastqs=NA12892.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa   
 ```
-Performs a multiple-sample variants call by freebayes or GATK. Multiple-sample called vcf file then is splitted into three single sample vcf files.   <br />
+Performs a multiple-sample variants call by freebayes or GATK.  <br />
 For GATK, more information can be found from <a href="https://software.broadinstitute.org/gatk/documentation/tooldocs/current/org_broadinstitute_gatk_tools_walkers_haplotypecaller_HaplotypeCaller.php">here</a>. 
 <br />
 ```
