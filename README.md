@@ -56,7 +56,7 @@ python3 HAPDeNovo_step2.py --child_vcf ../output/NA12878_phased_variants.vcf.gz 
 
 
 
-### Step3: (Type "python HAPDeNovo_step3.py -h" for help information)
+### Step3: (Type "python HAPDeNovo_step3.py -h" for help information)  For big memory server, chromosomes can be processed by multi-threads, and for small memory server, chromosome is suggested to be processed one by one. 
 ```
 python3 HAPDeNovo_step3.py --child NA12878 --parent1 NA12891 --parent2 NA12892 --child_id 20976 --parent1_id 20971 --parent2_id 20972 --child_bam ../output/NA12878_GRCh37.bam --parent1_bam ../output/NA12891_GRCh37.bam --parent2_bam ../output/NA12892_GRCh37.bam --reference refdata-hg19-2.1.0/fasta/genome.fa --chr_start 1 --chr_end 2 --out_dir ../output/
 ```
