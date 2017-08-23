@@ -1,6 +1,6 @@
 ### Get raw DNMs file from other tools like TrioDeNovo, GATK and etc
 
-#### 1. Run TrioDeNovo, more info about TrioDeNovo, check it's website:
+#### 1. Run TrioDeNovo, more info about TrioDeNovo, check it's  <a href="http://genome.sph.umich.edu/wiki/Triodenovo">website</a>:
 
 ```
 ../lib/triodenovo/bin/triodenovo --ped trio.ped  --in_vcf ../example/trio_merge.vcf --out_vcf trio.denovo.vcf_depth15_DQ7.out --minDepth 15 --minDQ 7
