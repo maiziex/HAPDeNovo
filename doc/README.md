@@ -16,4 +16,11 @@ python3 Preprocess_triodenovo_results.py -i trio.denovo.vcf_depth15_DQ7.out -o d
 --input_file: "trio.denovo.vcf_depth15_DQ7.out" is the file generated from TrioDeNovo.<br />
 --output_file: "denovo_triodenovo_depth15_DQ7.txt" can be used for HAPDeNovo. <br />
 
-
+### Or
+#### Preprocess GATK result file for HAPDeNovo:
+#### (Type "python Preprocess_GATK_results.py -h" for help information)
+```
+python3 Preprocess_GATK_results.py -i ../example/trio_merge_byGATK.vcf -o denovo_gatk_DP15_PL450.txt --depth 15 --PL 450 --child_id 20976 --parent1_id 20971 --parent2_id 20972
+```
+--input_file: "trio_merge_byGATK.vcf" is variant calling format file from FreeBayes. <br />
+--output_file: "denovo_gatk_DP15_PL450.txt" can be used for HAPDeNovo. <br />
