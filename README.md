@@ -4,7 +4,7 @@ HAPDeNovo is a software package to detect de novo mutations on barcoded read-clo
 
 ## Download:
 ```
-git clone https://github.com/HAPDeNovo/HAPDeNovo.git
+git clone https://github.com/maiziex/HAPDeNovo.git
 ```
 To download referece files, go to <a href="https://support.10xgenomics.com/genome-exome/software/downloads/latest">10X GENOMICS Website</a>, or
 ```
