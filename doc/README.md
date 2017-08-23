@@ -13,7 +13,8 @@
 ```
 python3 Preprocess_triodenovo_results.py -i trio.denovo.vcf_depth15_DQ7.out -o denovo_triodenovo_depth15_DQ7.txt --child_id 20976 --parent1_id 20971 --parent2_id 20972
 ```
-output: denovo_triodenovo_depth15_DQ7.txt can be used for HAPDeNovo
+--input_file: "trio.denovo.vcf_depth15_DQ7.out" is file generated from TrioDeNovo.<br />
+--output_file: "denovo_triodenovo_depth15_DQ7.txt" can be used for HAPDeNovo.<br />
 ```
 usage: Preprocess_triodenovo_results.py [-h] [--input_file INPUT_FILE]
                                         [--output_file OUTPUT_FILE]
