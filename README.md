@@ -32,7 +32,7 @@ Input are 10X fastqs files, to get bam files and phased vcf files:
 ../lib/longranger/longranger wgs --id=NA12891 --sex=male --fastqs=NA12891.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa  
 ../lib/longranger/longranger wgs --id=NA12892 --sex=female --fastqs=NA12892.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa   
 ```
-Performs a multiple-sample variants call by freebayes or GATK.  <br />
+Performs a multiple-sample variants call by FreeBayes or GATK.  <br />
 To generate trio_merge.vcf by using FreeBayes: <br />
 ```
 ../lib/freebayes/bin/freebayes -f refdata-hg19-2.0.0/fasta/genome.fa NA12878_GRCh37.bam NA12891_GRCh37.bam NA12892_GRCh37.bam  > trio_merge.vcf  
@@ -96,7 +96,7 @@ python3 HAPDeNovo_final.py --chr_start 1 --chr_end 22 --child_id 20976 --parent1
 --out_dir: "../output/" specifies the customized folder name for output results. <br />
 --output_file_prefix: "denovo_triodenovo_depth15_HAPDeNovo_filer1" is the user customized file name for final de novo mutation output. <br />
 --depth: "1" specifies the depth filter by 1. <br />
---input_file: "trio_merge.vcf" is the variant call file from freebayes (default). This input can also be the de novo results from other tools like GATK/TrioDenovo/DeNovoGear, or any user customized txt file for de novo muations. This text file only needs to contain chromose name and the corresponding locus per row for each de novo mutation. <br />
+--input_file: "trio_merge.vcf" is the variant call file from FreeBayes (default). This input can also be the de novo results from other tools like GATK/TrioDenovo/DeNovoGear, or any user customized txt file for de novo muations. This text file only needs to contain chromose name and the corresponding locus per row for each de novo mutation. <br />
 
 
 
