@@ -21,7 +21,7 @@ chmod +x install.sh
 ## Running The Code:
 ##### src: the working directory
 ##### lib: includes all the tools needed
-##### example: includes files to be tested if needed
+##### example: includes tested files if needed
 ##### doc: includes scripts to generate DNMs from other tools if needed
 
 ### Step 1:
