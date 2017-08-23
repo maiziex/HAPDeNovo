@@ -6,3 +6,4 @@ chmod +x src/*.sh
 chmod +x lib/GenomeAnalysisTK/GenomeAnalysisTK.jar
 rm lib.tar.gz
 rm example.tar.gz
+echo 'You have installed HAPDeNovo successfully!'
