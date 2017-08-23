@@ -13,28 +13,7 @@
 ```
 python3 Preprocess_triodenovo_results.py -i trio.denovo.vcf_depth15_DQ7.out -o denovo_triodenovo_depth15_DQ7.txt --child_id 20976 --parent1_id 20971 --parent2_id 20972
 ```
---input_file: "trio.denovo.vcf_depth15_DQ7.out" is file generated from TrioDeNovo.<br />
---output_file: "denovo_triodenovo_depth15_DQ7.txt" can be used for HAPDeNovo.<br />
-```
-usage: Preprocess_triodenovo_results.py [-h] [--input_file INPUT_FILE]
-                                        [--output_file OUTPUT_FILE]
-                                        [--child_id CHILD_ID]
-                                        [--parent1_id PARENT1_ID]
-                                        [--parent2_id PARENT2_ID]
+--input_file: "trio.denovo.vcf_depth15_DQ7.out" is the file generated from TrioDeNovo.<br />
+--output_file: "denovo_triodenovo_depth15_DQ7.txt" can be used for HAPDeNovo. <br />
 
-This Script Is Used for Preprocessing DeNovo Mutations from TrioDeNovo
-
-optional arguments:
-  -h, --help            show this help message and exit
-  --input_file INPUT_FILE, -i INPUT_FILE
-                        input filename
-  --output_file OUTPUT_FILE, -o OUTPUT_FILE
-                        output filename
-  --child_id CHILD_ID, -c CHILD_ID
-                        child id
-  --parent1_id PARENT1_ID, -p1 PARENT1_ID
-                        parent1 id
-  --parent2_id PARENT2_ID, -p2 PARENT2_ID
-                        parent2 id
-```
 
