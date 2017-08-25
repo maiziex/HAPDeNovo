@@ -42,7 +42,7 @@ do
 
     echo "extracting hp1 to get "$output_hp1
     echo "extract hp1 to get "$output_hp1
-    ../lib/samtoolssamtools view $out_dir$output  | grep "HP:i:1" | sed 's/'${sample_num}'/'${sample_num_hp1}'/g' | ../lib/samtools/samtools view -bt $reference".fai" > $out_dir$output_hp1
+    ../lib/samtools/samtools view $out_dir$output  | grep "HP:i:1" | sed 's/'${sample_num}'/'${sample_num_hp1}'/g' | ../lib/samtools/samtools view -bt $reference".fai" > $out_dir$output_hp1
     echo "extract hp2 to get "$output_hp2
     ../lib/samtools/samtools view $out_dir$output  | grep "HP:i:2" | sed 's/'${sample_num}'/'${sample_num_hp2}'/g' | ../lib/samtools/samtools view -bt $reference".fai" > $out_dir$output_hp2
     echo "extract nohp to get "$output_nohp
