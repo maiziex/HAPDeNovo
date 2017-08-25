@@ -30,9 +30,9 @@ chmod +x install.sh
 
 Inputs are 10X fastqs files, to get bam files and phased vcf files: 
 ```
-../lib/longranger/longranger wgs --id=NA12878 --sex=female --fastqs=NA12878.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa 
-../lib/longranger/longranger wgs --id=NA12891 --sex=male --fastqs=NA12891.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa  
-../lib/longranger/longranger wgs --id=NA12892 --sex=female --fastqs=NA12892.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa   
+../lib/longranger/longranger wgs --id=NA12878 --fastqs=NA12878.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa 
+../lib/longranger/longranger wgs --id=NA12891 --fastqs=NA12891.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa  
+../lib/longranger/longranger wgs --id=NA12892 --fastqs=NA12892.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa   
 ```
 Performs a multiple-sample variants call by FreeBayes or GATK.  <br />
 To generate trio_merge.vcf by using FreeBayes: <br />
