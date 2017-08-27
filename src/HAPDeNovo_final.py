@@ -299,7 +299,7 @@ def find_denovo_mut(vcf_file,threehps_vcf,reads_depth,fw,child_num,parent1_num,p
             parent1_GT = data[parent1_idx].split(":")[0]
             parent2_GT = data[parent2_idx].split(":")[0]
 
-            if (child_GT == "0|1" or child_GT == "0/1" or child_GT == "1|0" or child_GT == "1/0") and (parent1_GT == "0|0" or parent1_GT == "0/0") and (parent2_GT == "0|0" or parent2_GT == "0/0"):
+            if ((child_GT == "0|1" or child_GT == "0/1" or child_GT == "1|0" or child_GT == "1/0") and (parent1_GT == "0|0" or parent1_GT == "0/0") and (parent2_GT == "0|0" or parent2_GT == "0/0")) or ((child_GT == "0|1" or child_GT == "0/1" or child_GT == "1|0" or child_GT == "1/0") and parent1_GT == "."  and parent2_GT == "."):
                 count += 1
                 if highconf == 1 and denovo_raw_flag == 1:
                     denovo_loci.append(locus)
