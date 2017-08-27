@@ -338,7 +338,6 @@ if __name__ == "__main__":
         fw.writelines("Chr"+ "\t" + "Locus" + "\t" + "child_GT" + "\t" + "parents1_GT" + "\t" + "parents2_GT" + "\t" + "Confidence" + "\n")
         reads_depth = depth
         if args.input_file[-3:] == "vcf":
-            print("xin, i am here")
             validate_freebayescall_results(args.input_file,"freebayes_denovo.txt",15,50,child_num,parent1_num,parent2_num)
             denovo_raw_file = "freebayes_denovo.txt"
             print(denovo_raw_file)
