@@ -30,9 +30,9 @@ chmod +x install.sh
 
 Inputs are 10X fastqs files, to get bam files and phased vcf files: 
 ```
-../lib/longranger/longranger wgs --id=NA12878 --fastqs=NA12878.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa 
-../lib/longranger/longranger wgs --id=NA12891 --fastqs=NA12891.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa  
-../lib/longranger/longranger wgs --id=NA12892 --fastqs=NA12892.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa   
+../lib/longranger/longranger wgs --id=12878 --fastqs=NA12878.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa 
+../lib/longranger/longranger wgs --id=12891 --fastqs=NA12891.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa  
+../lib/longranger/longranger wgs --id=12892 --fastqs=NA12892.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa   
 ```
 Performs a multiple-sample variants call by FreeBayes or GATK.  <br />
 To generate trio_merge.vcf by using FreeBayes: <br />
@@ -73,9 +73,9 @@ python3 HAPDeNovo_step3.py --child NA12878 --parent1 NA12891 --parent2 NA12892 -
 --child: "NA12878" is the origin sample id of the child.  <br />
 --parent1: "NA12891" is the origin sample id of the first parent.  <br />
 --parent2: "NA12892" is the origin sample id of the second parent.  <br />
---child_id: "20976" is the sample id from the header of the bam file for child.<br />
---parent1_id: "20971" is the sample id from the header of the bam file for the first parent. <br />
---parent2_id: "20972" is the sample id from the header of the bam file for second parent. <br />
+--child_id: "20976" is the sample id from the header of the bam file for child, to check this sample id, you can use /src/Check_sampleID.py <br />
+--parent1_id: "20971" is the sample id from the header of the bam file for the first parent, to check this sample id, you can use /src/Check_sampleID.py <br />
+--parent2_id: "20972" is the sample id from the header of the bam file for second parent, to check this sample id, you can use /src/Check_sampleID.py <br />
 --child_bam: "NA12878_GRCh37.bam" is the bam file of the child. <br />
 --parent1_bam: "NA12891_GRCh37.bam" is the bam file of the first parent. <br />
 --parent2_bam: "NA12892_GRCh37.bam" is the bam file of the second parent. <br />
