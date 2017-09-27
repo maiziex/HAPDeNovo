@@ -107,7 +107,7 @@ python3 HAPDeNovo_final.py --chr_start 1 --chr_end 22 --child_id 20976 --parent1
 --out_dir: "../output/" specifies the customized folder name for output results. <br />
 --output_file_prefix: "denovo_triodenovo_depth15_HAPDeNovo_filer1" is the user customized file name for final de novo mutation output. <br />
 --depth: "1" specifies the depth filter by 1. <br />
---input_file: "trio_merge.vcf" is the variant call file from FreeBayes (default). This input can also be the de novo results from other tools like GATK/TrioDenovo/DeNovoGear (check <a href="https://github.com/maiziex/HAPDeNovo/tree/master/doc">doc</a> <br />), or any user customized txt file for de novo muations. This text file only needs to contain chromose name and the corresponding locus per row for each de novo mutation. <br />
+--input_file: "trio_merge.vcf" is the variant call file from FreeBayes (default). This input can also be the de novo results from other tools like GATK/TrioDenovo/DeNovoGear(check <a href="https://github.com/maiziex/HAPDeNovo/tree/master/doc">doc</a> <br />), or any user customized txt file for de novo muations. This text file only needs to contain chromose name and the corresponding locus per row for each de novo mutation. <br />
 
 
 
