@@ -28,14 +28,14 @@ chmod +x install.sh
 
 ### Step 1:
 
-Inputs are 10X fastqs files, to get > bam files: 
+Inputs are 10X fastqs files, to get `bam` files: 
 ```
 ../lib/longranger/longranger align --id=12878 --fastqs=NA12878.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa 
 ../lib/longranger/longranger align --id=12891 --fastqs=NA12891.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa  
 ../lib/longranger/longranger align --id=12892 --fastqs=NA12892.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa   
 ```
 Performs a multiple-sample variants call by FreeBayes or GATK.  <br />
-To generate trio_merge.vcf by using FreeBayes: <br />
+To generate `trio_merge.vcf` by using FreeBayes: <br />
 ```
 ../lib/freebayes/bin/freebayes -f refdata-hg19-2.0.0/fasta/genome.fa NA12878_GRCh37.bam NA12891_GRCh37.bam NA12892_GRCh37.bam  > trio_merge.vcf  
 ```
