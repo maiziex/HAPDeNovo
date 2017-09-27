@@ -37,14 +37,14 @@ Inputs are 10X fastqs files, to get `bam` files:
 Performs a multiple-sample variants call by FreeBayes or GATK.  <br />
 To generate `trio_merge.vcf` by using FreeBayes: <br />
 ```
-../lib/freebayes/bin/freebayes -f refdata-hg19-2.0.0/fasta/genome.fa NA12878_GRCh37.bam NA12891_GRCh37.bam NA12892_GRCh37.bam  > trio_merge.vcf  
+../lib/freebayes/bin/freebayes -f refdata-hg19-2.0.0/fasta/genome.fa ../example/NA12878_GRCh37.bam ../example/NA12891_GRCh37.bam ../example/NA12892_GRCh37.bam  > trio_merge.vcf  
 ```
 
 Or to generate trio_merge.vcf by using GATK. For GATK, more information can be found from <a href="https://software.broadinstitute.org/gatk/documentation/tooldocs/current/org_broadinstitute_gatk_tools_walkers_haplotypecaller_HaplotypeCaller.php">here</a>.
 ```
-java -jar ../lib/GenomeAnalysisTK/GenomeAnalysisTK.jar -T HaplotypeCaller -R refdata-hg19-2.1.0/fasta/genome.fa -I NA12878_GRCh37.bam -o child_gvcf -ERC GVCF  
-java -jar ../lib/GenomeAnalysisTK/GenomeAnalysisTK.jar -T HaplotypeCaller -R refdata-hg19-2.1.0/fasta/genome.fa -I NA12891_GRCh37.bam -o parent1_gvcf -ERC GVCF  
-java -jar ../lib/GenomeAnalysisTK/GenomeAnalysisTK.jar -T HaplotypeCaller -R refdata-hg19-2.1.0/fasta/genome.fa -I NA12892_GRCh37.bam -o parent2_gvcf -ERC GVCF 
+java -jar ../lib/GenomeAnalysisTK/GenomeAnalysisTK.jar -T HaplotypeCaller -R refdata-hg19-2.1.0/fasta/genome.fa -I ../example/NA12878_GRCh37.bam -o child_gvcf -ERC GVCF  
+java -jar ../lib/GenomeAnalysisTK/GenomeAnalysisTK.jar -T HaplotypeCaller -R refdata-hg19-2.1.0/fasta/genome.fa -I ../example/NA12891_GRCh37.bam -o parent1_gvcf -ERC GVCF  
+java -jar ../lib/GenomeAnalysisTK/GenomeAnalysisTK.jar -T HaplotypeCaller -R refdata-hg19-2.1.0/fasta/genome.fa -I ../example/NA12892_GRCh37.bam -o parent2_gvcf -ERC GVCF 
 java -jar ../lib/GenomeAnalysisTK/GenomeAnalysisTK.jar -T GenotypeGVCFs -R refdata-hg19-2.1.0/fasta/genome.fa -V child_gvcf -V parent1_gvcf -V parent2_gvcf -o trio_merge.vcf  
 ```
 To split the multiple-sample vcf file:
@@ -74,7 +74,7 @@ python3 HAPDeNovo_step2.py --child_vcf ../example/NA12878_phased_variants.vcf.gz
 
 
 ### Step3: (Type "pythons HAPDeNovo_step3.py -h" for more information)  
-##### For large memory server, chromosomes can be processed by multi-threading, and for small memory server, chromosome is suggested to be processed one by one. 
+##### For large memory server, chromosomes can be processed by multi-threading, and for small memory server, chromosome is suggested to be processed one by one. This step is time consuming.
 ```
 python3 HAPDeNovo_step3.py --child NA12878 --parent1 NA12891 --parent2 NA12892 --child_id 20976 --parent1_id 20971 --parent2_id 20972 --child_bam ../example/NA12878_GRCh37.bam --parent1_bam ../example/NA12891_GRCh37.bam --parent2_bam ../example/NA12892_GRCh37.bam --reference refdata-hg19-2.1.0/fasta/genome.fa --chr_start 1 --chr_end 1 --out_dir ../output/
 ```
