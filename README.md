@@ -97,7 +97,7 @@ python3 HAPDeNovo_step3.py --child NA12878 --parent1 NA12891 --parent2 NA12892 -
 ### Run HAPDeNovo_final.py: (Type "python3 HAPDeNovo_final.py -h" for more information)
 
 ```
-python3 HAPDeNovo_final.py --chr_start 1 --chr_end 22 --child_id 20976 --parent1_id 20971 --parent2_id 20972 --out_dir ../output/ --output_file_prefix denovo_triodenovo_depth15_HAPDeNovo_filer1 --depth 1 --input_file ../example/trio_merge.vcf
+python3 HAPDeNovo_final.py --chr_start 1 --chr_end 22 --child_id 20976 --parent1_id 20971 --parent2_id 20972 --out_dir ../output/ --output_file_prefix HAPDeNovo_filer1_result --depth 1 --input_file ../example/trio_merge.vcf
 ```
 --chr_start: "1" specifies chromosome starting from 1.  <br />
 --chr_end: "22" specifies chromosome ending by 22.   <br />
