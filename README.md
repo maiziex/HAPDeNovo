@@ -28,11 +28,11 @@ chmod +x install.sh
 
 ### Step 1:
 
-Inputs are 10X fastqs files, to get bam files and phased vcf files: 
+Inputs are 10X fastqs files, to get bam files: 
 ```
-../lib/longranger/longranger wgs --id=12878 --fastqs=NA12878.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa 
-../lib/longranger/longranger wgs --id=12891 --fastqs=NA12891.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa  
-../lib/longranger/longranger wgs --id=12892 --fastqs=NA12892.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa   
+../lib/longranger/longranger align --id=12878 --fastqs=NA12878.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa 
+../lib/longranger/longranger align --id=12891 --fastqs=NA12891.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa  
+../lib/longranger/longranger align --id=12892 --fastqs=NA12892.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa   
 ```
 Performs a multiple-sample variants call by FreeBayes or GATK.  <br />
 To generate trio_merge.vcf by using FreeBayes: <br />
@@ -47,8 +47,17 @@ java -jar ../lib/GenomeAnalysisTK/GenomeAnalysisTK.jar -T HaplotypeCaller -R ref
 java -jar ../lib/GenomeAnalysisTK/GenomeAnalysisTK.jar -T HaplotypeCaller -R refdata-hg19-2.1.0/fasta/genome.fa -I NA12892_GRCh37.bam -o parent2_gvcf -ERC GVCF 
 java -jar ../lib/GenomeAnalysisTK/GenomeAnalysisTK.jar -T GenotypeGVCFs -R refdata-hg19-2.1.0/fasta/genome.fa -V child_gvcf -V parent1_gvcf -V parent2_gvcf -o trio_merge.vcf  
 ```
+To split the multiple-sample vcf file:
+```
+../lib/vcftools/src/perl/vcf-subset -c trio_merge.vcf
+```
 
-
+To run phased variants call, all the precalled vcf files are generated from the previous step:
+```
+longranger wgs --id=NA12878 --sex=female --fastqs=NA12878.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa --precalled=20976.vcf  
+longranger wgs --id=NA12891 --sex=male --fastqs=NA12891.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa --precalled=20971.vcf  
+longranger wgs --id=NA12892 --sex=female --fastqs=NA12892.fastqs --reference=refdata-hg19-2.1.0/fasta/genome.fa --precalled=20972.vcf  
+```
 
 ### Step 2: (Type "python3 HAPDeNovo_step2.py -h" for more information)
 ```
