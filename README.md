@@ -1,4 +1,4 @@
-# HAPDeNovo: a haplotype based approach for filtering and phasing de novo mutations on barcoded read-cloud sequencing
+# HAPDeNovo: a haplotype based approach for filtering and phasing de novo mutations on barcoded linked read sequencing
 
 ## Introduction
 
