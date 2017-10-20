@@ -2,7 +2,7 @@
 
 ## Introduction
 
-HAPDeNovo is a software package to detect de novo mutations on barcoded read-cloud sequencing. We identified the major source of de novo mutation from NGS data was caused by the biased haplotype coverage. HAPDeNovo can eliminate more than 99% false positive de novo calls with the help of 10X linked read sequencing.
+HAPDeNovo is a software package to detect de novo mutations on barcoded linked read sequencing. We identified the major source of de novo mutation from NGS data was caused by the biased haplotype coverage. HAPDeNovo can eliminate more than 99% false positive de novo calls with the help of 10X linked read sequencing.
 
 ## Download:
 ```
