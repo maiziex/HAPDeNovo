@@ -113,7 +113,7 @@ python3 HAPDeNovo_final.py --chr_start 1 --chr_end 22 --child_id 20976 --parent1
 
 #### The output format of HAPDeNovo:
 ```
-Chr	Locus	     REF ALT child_GT parents1_GT parents2_GT Confidence
+Chr	Locus	      REF  ALT  child_GT  parents1_GT  parents2_GT  Confidence
 chr15	21173525	C	T	0|1	0|0	0|0	H
 chr15	22659065	G	A	0|1	0|0	0|0	L
 chr15	32590720	C	G	1|0	0|0	0|0	L
