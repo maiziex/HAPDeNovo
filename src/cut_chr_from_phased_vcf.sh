@@ -37,9 +37,9 @@ do
     fi
     output_prefix="_"
     output_suffix=".vcf.gz"
-    output1=$input1$output_prefix$chr_num$output_suffix
-    output2=$input2$output_prefix$chr_num$output_suffix
-    output3=$input3$output_prefix$chr_num$output_suffix
+    output1=$input1$output_prefix$chr$i$output_suffix
+    output2=$input2$output_prefix$chr$i$output_suffix
+    output3=$input3$output_prefix$chr$i$output_suffix
 
     output4=$output_start"_"$chr_num".vcf"
     echo $chr_num
