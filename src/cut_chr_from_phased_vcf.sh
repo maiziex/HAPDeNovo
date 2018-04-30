@@ -41,7 +41,7 @@ do
     output2=$input2$output_prefix$chr$i$output_suffix
     output3=$input3$output_prefix$chr$i$output_suffix
 
-    output4=$output_start"_"$chr_num".vcf"
+    output4=$output_start"_"$chr$i".vcf"
     echo $chr_num
     echo "processing "$output1
     ../lib/tabix/tabix -h $input1 $chr_num | bgzip -c > $output1
