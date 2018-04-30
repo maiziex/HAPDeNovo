@@ -26,8 +26,10 @@ chmod +x install.sh
 ##### example: includes tested files if needed
 ##### doc: includes scripts to generate raw DNMs pool from other tools if needed
 
-### for the X chromosome
-#### use 23 in the below steps for X chromosome 
+### For the X chromosome
+```
+use 23 in the below steps for X chromosome 
+```
 
 ### Step 1:
 
