@@ -1,4 +1,5 @@
 #set -x
+export PERL5LIB=../lib/vcftools/src/perl
 input1=$1
 input2=$2 
 input3=$3
