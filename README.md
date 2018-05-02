@@ -29,7 +29,7 @@ chmod +x install.sh
 ### For the X chromosome
 ```
 use 23 in some below steps for X chromosome 
-for X chromosome, make sure parent1: father, parent2 : mother
+for X chromosome, make sure parent1 is father, and parent2 is mother
 ```
 
 ### Step 1:
