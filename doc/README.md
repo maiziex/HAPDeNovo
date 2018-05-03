@@ -26,7 +26,7 @@ python3 Preprocess_GATK_results.py -i ../example/trio_merge_byGATK.vcf -o denovo
 --output_file: "denovo_gatk_DP15_PL450.txt" can be used for HAPDeNovo. <br />
 
 ### Or
-#### 1. Run TrioDeNovo, more info about DeNovogear, check it's  <a href="https://github.com/denovogear/denovogear">website</a>:
+#### 1. Run DeNovoGear, more info about DeNovogear, check it's  <a href="https://github.com/denovogear/denovogear">website</a>:
 
 ```
 ../lib/denovogear/bin/dng dnm auto --ped family.ped --rd_cutoff 15 --pp_cutoff 0.00003 --vcf trio_merge_byGATK.vcf --output_vcf $output
