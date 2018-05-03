@@ -29,7 +29,7 @@ python3 Preprocess_GATK_results.py -i ../example/trio_merge_byGATK.vcf -o denovo
 #### 1. Run DeNovoGear, more info about DeNovogear, check it's  <a href="https://github.com/denovogear/denovogear">website</a>:
 
 ```
-../lib/denovogear/bin/dng dnm auto --ped family.ped --rd_cutoff 15 --pp_cutoff 0.00003 --vcf trio_merge_byGATK.vcf --output_vcf $output
+../lib/denovogear/bin/dng dnm auto --ped family.ped --rd_cutoff 15 --pp_cutoff 0.00003 --vcf trio_merge_byGATK.vcf --output_vcf denovogear_gatk_dp15_pp_3.vcf
 ```
 --in_vcf: "trio_merge_byGATK.vcf" is variant calling format file from GATK. <br />
 
