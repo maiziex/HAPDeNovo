@@ -29,10 +29,11 @@ chmod +x install.sh
 ### For the X chromosome
 ```
 use 23 in some below steps for X chromosome 
-X in female offspring: 
+1. X in female offspring: 
 --child_sex = female
-X in male offspring: 
+2. X in male offspring: 
 --child_sex = male
+
 For X chromosome, make sure parent1 is father, and parent2 is mother
 ```
 
