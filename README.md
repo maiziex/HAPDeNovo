@@ -29,7 +29,11 @@ chmod +x install.sh
 ### For the X chromosome
 ```
 use 23 in some below steps for X chromosome 
-for X chromosome, make sure parent1 is father, and parent2 is mother
+X in female offspring: 
+--child_sex = female
+X in male offspring: 
+--child_sex = male
+For X chromosome, make sure parent1 is father, and parent2 is mother
 ```
 
 ### Step 1:
@@ -82,7 +86,7 @@ python3 HAPDeNovo_step2.py --child_vcf ../example/NA12878_phased_variants.vcf.gz
 ### Step3: (Type "pythons HAPDeNovo_step3.py -h" for more information)  
 ##### For large memory server, chromosomes can be processed by multi-threading, and for small memory server, chromosome is suggested to be processed one by one. This step is time consuming.
 ```
-python3 HAPDeNovo_step3.py --child NA12878 --parent1 NA12891 --parent2 NA12892 --child_id 20976 --parent1_id 20971 --parent2_id 20972 --child_bam ../example/NA12878_GRCh37.bam --parent1_bam ../example/NA12891_GRCh37.bam --parent2_bam ../example/NA12892_GRCh37.bam --reference refdata-hg19-2.1.0/fasta/genome.fa --chr_start 1 --chr_end 1 --out_dir ../output/
+python3 HAPDeNovo_step3.py --child NA12878 --parent1 NA12891 --parent2 NA12892 --child_id 20976 --parent1_id 20971 --parent2_id 20972 --child_bam ../example/NA12878_GRCh37.bam --parent1_bam ../example/NA12891_GRCh37.bam --parent2_bam ../example/NA12892_GRCh37.bam --reference refdata-hg19-2.1.0/fasta/genome.fa --chr_start 1 --chr_end 1 --out_dir ../output/ --child_sex female
 ```
 
 --child: "NA12878" is the origin sample id of the child.  <br />
@@ -98,12 +102,13 @@ python3 HAPDeNovo_step3.py --child NA12878 --parent1 NA12891 --parent2 NA12892 -
 --chr_start: "1" specifies chromosome starting from 1.  <br />
 --chr_end: "1" specifies chromosome ending by 1.   <br />
 --out_dir: "../output/" specifies the customized folder name for output results. <br />
+--child_sex: "female" used by daughter. <br />
 
 
 ### Run HAPDeNovo_final.py: (Type "python3 HAPDeNovo_final.py -h" for more information)
 
 ```
-python3 HAPDeNovo_final.py --chr_start 1 --chr_end 22 --child_id 20976 --parent1_id 20971 --parent2_id 20972 --out_dir ../output/ --output_file_prefix HAPDeNovo_filer1_result --depth 1 --input_file ../example/trio_merge.vcf
+python3 HAPDeNovo_final.py --chr_start 1 --chr_end 23 --child_id 20976 --parent1_id 20971 --parent2_id 20972 --out_dir ../output/ --output_file_prefix HAPDeNovo_filer1_result --depth 1 --input_file ../example/trio_merge.vcf --child_sex female
 ```
 --chr_start: "1" specifies chromosome starting from 1.  <br />
 --chr_end: "23" specifies chromosome ending by 23 (chrX).   <br />
@@ -113,7 +118,10 @@ python3 HAPDeNovo_final.py --chr_start 1 --chr_end 22 --child_id 20976 --parent1
 --out_dir: "../output/" specifies the customized folder name for output results. <br />
 --output_file_prefix: "denovo_triodenovo_depth15_HAPDeNovo_filer1" is the user customized file name for final de novo mutation output. <br />
 --depth: "1" specifies the depth filter by 1. <br />
---input_file: "trio_merge.vcf" is the variant call file from FreeBayes (default). This input can also be the de novo results from other tools like GATK/TrioDenovo/DeNovoGear  (check <a href="https://github.com/maiziex/HAPDeNovo/tree/master/doc">doc</a> <br />), or any user customized txt file for de novo muations. This text file only needs to contain chromose name and the corresponding locus per row for each de novo mutation. <br />
+--input_file: "trio_merge.vcf" is the variant call file from FreeBayes (default). This input can also be the de novo results from other tools like GATK/TrioDenovo/DeNovoGear  (check <a href="https://github.com/maiziex/HAPDeNovo/tree/master/doc">doc</a> <br />), or any user customized txt file for de novo muations. This text file only needs to contain chromose name and the corresponding locus per row for each de novo mutation. 
+<br />
+--child_sex: "female" used by daughter. <br />
+
 
 
 
