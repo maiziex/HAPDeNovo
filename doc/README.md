@@ -33,3 +33,10 @@ python3 Preprocess_GATK_results.py -i ../example/trio_merge_byGATK.vcf -o denovo
 ```
 --in_vcf: "trio_merge_byGATK.vcf" is variant calling format file from GATK. <br />
 
+#### 2. Preprocess DeNovoGear result file for HAPDeNovo:
+#### (Type "python Preprocess_denovogear_results.py -h" for help information)
+```
+python3 Preprocess_triodenovo_results.py -i trio.denovo.vcf_depth15_DQ7.out -o denovo_triodenovo_depth15_DQ7.txt --child_id 20976 --parent1_id 20971 --parent2_id 20972
+```
+--input_file: "trio.denovo.vcf_depth15_DQ7.out" is the file generated from TrioDeNovo.<br />
+--output_file: "denovo_triodenovo_depth15_DQ7.txt" can be used for HAPDeNovo. <br />
