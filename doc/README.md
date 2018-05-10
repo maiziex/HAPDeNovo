@@ -36,7 +36,7 @@ python3 Preprocess_GATK_results.py -i ../example/trio_merge_byGATK.vcf -o denovo
 #### 2. Preprocess DeNovoGear result file for HAPDeNovo:
 #### (Type "python Preprocess_denovogear_results.py -h" for help information)
 ```
-python3 Preprocess_triodenovo_results.py -i trio.denovo.vcf_depth15_DQ7.out -o denovo_triodenovo_depth15_DQ7.txt --child_id 20976 --parent1_id 20971 --parent2_id 20972
+python3 Preprocess_triodenovo_results.py -i denovogear_gatk_dp15_pp_3.vcf -o denovo_denovogear_dp15_pp_3_withX.txt
 ```
---input_file: "trio.denovo.vcf_depth15_DQ7.out" is the file generated from TrioDeNovo.<br />
---output_file: "denovo_triodenovo_depth15_DQ7.txt" can be used for HAPDeNovo. <br />
+--input_file: "denovogear_gatk_dp15_pp_3.vcf" is the file generated from DeNovoGear.<br />
+--output_file: "denovo_denovogear_dp15_pp_3_withX.txt" can be used for HAPDeNovo. <br />
